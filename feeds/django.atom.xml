@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love - Django</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/django.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2017-08-19T13:54:00+03:00</updated><entry><title>Django Queryset: select and prefetch related.</title><link href="https://blog.DmytroLitvinov.com/2017/08/19/django-queryset-select-and-prefetch-related" rel="alternate"></link><published>2017-08-19T13:54:00+03:00</published><updated>2017-08-19T13:54:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-08-19:/2017/08/19/django-queryset-select-and-prefetch-related</id><summary type="html">&lt;p&gt;Some information for understanding Django Queryset  methods: select_related and prefetch_relateds&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today, we will learn more about Django Queryset methods &lt;strong&gt;&lt;em&gt;select_related()&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;prefetch_related&lt;/em&gt;()&lt;/strong&gt;. I decided to write an article after I &lt;a href="https://medium.com/@dmytrolitvinov/idea-for-the-djangotip-post-select-related-and-prefetch-related-with-new-object-prefetch-f1b8163eb5dd"&gt;recommended&lt;/a&gt; to a blogger &lt;a href="https://medium.com/@lucasmagnum"&gt;Lucas Magnum&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;While I wrote this post I see that a slogan of Lucas Magnum's blog is:
+(I support this idea with both hands :blush:)&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learning through sharing. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before you start, you need to know about &lt;a href="https://medium.com/@hakibenita/things-you-must-know-about-django-admin-as-your-app-gets-bigger-6be0b0ee9614"&gt;&lt;strong&gt;a problem N+1&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you just started programming on Django framework, you need to remember:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;select_related&lt;/em&gt; - forward relationship&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;prefetch_related&lt;/em&gt; - reverse relationship&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;List of links to read:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django docs about &lt;a href="https://docs.djangoproject.com/en/1.11/ref/models/querysets/#select-related"&gt;select_related&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django docs about &lt;a href="https://docs.djangoproject.com/en/1.11/ref/models/querysets/#prefetch-related"&gt;prefetch_related&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Of course &lt;a href="https://medium.com/@lucasmagnum/djangotip-select-prefetch-related-e76b683aa457"&gt;Lucas Magnum's post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kennethjiang.blogspot.com/2016/01/advanced-usage-of-prefetchrelated-and.html"&gt;Advanced usage of prefetch_related&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@hansonkd/performance-problems-in-the-django-orm-1f62b3d04785"&gt;Solving Performance Problems in the Django ORM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="django"></category><category term="queryset"></category><category term="select_related"></category><category term="prefetch_related"></category></entry><entry><title>How to learn Django Framework</title><link href="https://blog.DmytroLitvinov.com/2017/03/16/how-to-learn-django-framework" rel="alternate"></link><published>2017-03-16T09:32:00+02:00</published><updated>2017-03-16T09:32:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-03-16:/2017/03/16/how-to-learn-django-framework</id><summary type="html">&lt;p&gt;Sometimes I read &lt;a href="https://www.reddit.com"&gt;Reddit&lt;/a&gt;, and I see that sometimes &lt;a href="https://www.reddit.com/r/django/"&gt;Django channel&lt;/a&gt; apeear questions about &lt;em&gt;how to learn this framework great framework&lt;/em&gt;.
+First of all, it must be said that the documentation of Django is very well documented. And they have no less bad &lt;a href="https://docs.djangoproject.com/en/stable/intro/tutorial01/"&gt;tutorial&lt;/a&gt;. It covers the most beginner questions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes I read &lt;a href="https://www.reddit.com"&gt;Reddit&lt;/a&gt;, and I see that sometimes &lt;a href="https://www.reddit.com/r/django/"&gt;Django channel&lt;/a&gt; apeear questions about &lt;em&gt;how to learn this framework great framework&lt;/em&gt;.
+First of all, it must be said that the documentation of Django is very well documented. And they have no less bad &lt;a href="https://docs.djangoproject.com/en/stable/intro/tutorial01/"&gt;tutorial&lt;/a&gt;. It covers the most beginner questions that may arise in your development with framework. Of course, if you need to delve deeper into knowledge, then you need to read the documentation, which, as I mentioned above, is well written.&lt;/p&gt;
+&lt;h3&gt;List of books and articles that can helps you:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://tutorial.djangogirls.org/en/index.html"&gt;DjangoGirls&lt;/a&gt; - dont look at name :) good start for newbies.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.tangowithdjango.com/"&gt;Tango with Django&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mozilla.org/en/docs/Learn/Server-side/Django"&gt;Tutorial&lt;/a&gt; from Mozilla&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.twoscoopspress.com/products/two-scoops-of-django-1-8"&gt;Two scoops of Django&lt;/a&gt; - good advices here.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.packtpub.com/web-development/django-example"&gt;Django by example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.vitaliypodoba.com/books/django-for-beginners/"&gt;Django for beginners[UA]&lt;/a&gt; - a good book with support in private forum.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;List of youtube playlists:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=qgGIqRFvFFk&amp;amp;list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK"&gt;Django Tutorials for Beginners&lt;/a&gt; from &lt;a href="https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw"&gt;thenewboston&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/user/CodingEntrepreneurs/playlists"&gt;All of this playlists&lt;/a&gt; from Justin. Hey, Justin, thank you for videos :)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/playlist?list=PLxxA5z-8B2xk4szCgFmgonNcCboyNneMD"&gt;Playlist from Mike Hibbert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=QgdINlxm-wE&amp;amp;list=PLpTASIMYgCp8supkEmnnrYa5xi9g91ZPI"&gt;Tutorial from Shadrus in Russian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learn - it's wonderful! But sometimes it is necessary to move from theory to practice. &lt;/p&gt;</content><category term="python"></category><category term="django"></category><category term="learning"></category></entry></feed>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love - Dev</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/dev.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2017-08-20T09:11:00+03:00</updated><entry><title>Redshift: setup the color temperature of your screen according to your surroundings</title><link href="https://blog.DmytroLitvinov.com/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings" rel="alternate"></link><published>2017-08-20T09:11:00+03:00</published><updated>2017-08-20T09:11:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-08-20:/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is description about software from main site. &lt;/p&gt;
+&lt;p&gt;Earlier, I used &lt;a href="https://justgetflux.com/"&gt;f.lux&lt;/a&gt; for Windows and I was happy with …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is description about software from main site. &lt;/p&gt;
+&lt;p&gt;Earlier, I used &lt;a href="https://justgetflux.com/"&gt;f.lux&lt;/a&gt; for Windows and I was happy with this program, but when I switched to Linux, I found out that after a month the f.lux stopped working. After I found out that there might be a problem due to my video card nVidia on Ubuntu OS (&lt;a href="https://www.youtube.com/watch?v=_36yNWw_07g"&gt;hello from Linus&lt;/a&gt;), I immediately decided to find another program and that was &lt;a href="http://jonls.dk/redshift/"&gt;Redshift&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h3&gt;1. Install programm&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install redshift redshift-gtk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;2. Setup config file&lt;/h3&gt;
+&lt;p&gt;Create next file &lt;code&gt;~/.config/redshift.conf&lt;/code&gt; at your $HOME directory.
+Example of &lt;code&gt;redshift.conf&lt;/code&gt; file you can look &lt;a href="https://github.com/jonls/redshift/blob/master/redshift.conf.sample"&gt;here&lt;/a&gt;.
+If you need to find quickly your location, use &lt;a href="https://justgetflux.com/map.html"&gt;f.lux: Where am I?&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;3. Starting Redshift automatically&lt;/h3&gt;
+&lt;p&gt;You dont need add at startup applications command lines, just type once in your terminal &lt;code&gt;redshift-gtk&lt;/code&gt; and at tray icon click to "Autostart", close programm that you started, and then you can reboot to see results.&lt;/p&gt;</content><category term="redshift"></category><category term="programm"></category></entry><entry><title>Python podcast</title><link href="https://blog.DmytroLitvinov.com/2017/03/13/python-podcast" rel="alternate"></link><published>2017-03-13T18:53:00+02:00</published><updated>2017-03-24T21:49:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-03-13:/2017/03/13/python-podcast</id><summary type="html">&lt;h3&gt;Learn something new, be in the trend with podcasts.&lt;/h3&gt;
+&lt;p&gt;And what do you do when you go to work or from work? It is possible to spend this free time with &lt;strong&gt;advantage&lt;/strong&gt;. Someone listens the audiobooks, and I suggest listening to audio &lt;em&gt;podcasts&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://talkpython.fm/"&gt;Talk Python&lt;/a&gt; - the famous podcast about python …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;Learn something new, be in the trend with podcasts.&lt;/h3&gt;
+&lt;p&gt;And what do you do when you go to work or from work? It is possible to spend this free time with &lt;strong&gt;advantage&lt;/strong&gt;. Someone listens the audiobooks, and I suggest listening to audio &lt;em&gt;podcasts&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://talkpython.fm/"&gt;Talk Python&lt;/a&gt; - the famous podcast about python here. Just listen it ♫&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.podcastinit.com/"&gt;Podcast__init__&lt;/a&gt; - another updatable podcast.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.kennethreitz.org/import-this/"&gt;Import This&lt;/a&gt; - podcast from Kenneth Reitz. &lt;a href="https://github.com/kennethreitz/requests"&gt;requests&lt;/a&gt; is his library ☺&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Update: I found a great article about &lt;a href="https://dbader.org/blog/ultimate-list-of-python-podcasts"&gt;Python podcast&lt;/a&gt;. Definitely the good article&lt;/p&gt;
+&lt;p&gt;Take a walk with a benefit from podcast.&lt;/p&gt;</content><category term="python"></category><category term="podcast"></category></entry></feed>
