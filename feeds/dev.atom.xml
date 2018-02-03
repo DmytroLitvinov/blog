@@ -9,11 +9,8 @@
 &lt;p&gt;This is description about software from main site. &lt;/p&gt;
 &lt;p&gt;Earlier, I used &lt;a href="https://justgetflux.com/"&gt;f.lux&lt;/a&gt; for Windows and I was happy with this program, but when I switched to Linux, I found out that after a month the f.lux stopped working. After I found out that there might be a problem due to my video card nVidia on Ubuntu OS (&lt;a href="https://www.youtube.com/watch?v=_36yNWw_07g"&gt;hello from Linus&lt;/a&gt;), I immediately decided to find another program and that was &lt;a href="http://jonls.dk/redshift/"&gt;Redshift&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
-&lt;h3&gt;1. Install programm&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install redshift redshift-gtk
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;h3&gt;1. Install program&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install redshift redshift-gtk&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;2. Setup config file&lt;/h3&gt;
 &lt;p&gt;Create next file &lt;code&gt;~/.config/redshift.conf&lt;/code&gt; at your $HOME directory.
 Example of &lt;code&gt;redshift.conf&lt;/code&gt; file you can look &lt;a href="https://github.com/jonls/redshift/blob/master/redshift.conf.sample"&gt;here&lt;/a&gt;.

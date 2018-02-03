@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2017-08-20T09:11:00+03:00</updated><entry><title>Redshift: setup the color temperature of your screen according to your surroundings</title><link href="https://blog.DmytroLitvinov.com/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings" rel="alternate"></link><published>2017-08-20T09:11:00+03:00</published><updated>2017-08-20T09:11:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-08-20:/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-02-03T17:03:00+02:00</updated><entry><title>Create static blog</title><link href="https://blog.DmytroLitvinov.com/2018/02/03/create-static-blog" rel="alternate"></link><published>2018-02-03T17:03:00+02:00</published><updated>2018-02-03T17:03:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-02-03:/2018/02/03/create-static-blog</id><summary type="html">&lt;p&gt;Each programmer in his life should: learn a git, do a to-do list, and also make a &lt;a href="https://github.com/DmytroLitvinov/blog"&gt;blog&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;If you are python programmer, I recommend you to do your personal blog with help of python.&lt;/p&gt;
+&lt;p&gt;My current blog created with help of &lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican&lt;/a&gt; using &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex theme&lt;/a&gt; 
+and hosted at GitHub …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Each programmer in his life should: learn a git, do a to-do list, and also make a &lt;a href="https://github.com/DmytroLitvinov/blog"&gt;blog&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;If you are python programmer, I recommend you to do your personal blog with help of python.&lt;/p&gt;
+&lt;p&gt;My current blog created with help of &lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican&lt;/a&gt; using &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex theme&lt;/a&gt; 
+and hosted at GitHub. &lt;/p&gt;
+&lt;p&gt;The main files you should pay attention to are: &lt;a href="https://github.com/DmytroLitvinov/blog/blob/master/pelicanconf.py"&gt;pelicanconf.py&lt;/a&gt; 
+and &lt;a href="https://github.com/DmytroLitvinov/blog/blob/master/publishconf.py"&gt;publishconf.py&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pelican has a great &lt;a href="link-http://docs.getpelican.com/en/stable/quickstart.html"&gt;quickstart section&lt;/a&gt;, 
+after reading that, you will already have generated the main template for your blog.&lt;/p&gt;
+&lt;p&gt;I recommend you create repository called 'blog' and push these files to this repo.&lt;/p&gt;
+&lt;p&gt;So, add content and your blog is ready. Pretty simple, right?&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Redshift: setup the color temperature of your screen according to your surroundings</title><link href="https://blog.DmytroLitvinov.com/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings" rel="alternate"></link><published>2017-08-20T09:11:00+03:00</published><updated>2017-08-20T09:11:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-08-20:/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This is description about software from main site. &lt;/p&gt;
@@ -9,11 +21,8 @@
 &lt;p&gt;This is description about software from main site. &lt;/p&gt;
 &lt;p&gt;Earlier, I used &lt;a href="https://justgetflux.com/"&gt;f.lux&lt;/a&gt; for Windows and I was happy with this program, but when I switched to Linux, I found out that after a month the f.lux stopped working. After I found out that there might be a problem due to my video card nVidia on Ubuntu OS (&lt;a href="https://www.youtube.com/watch?v=_36yNWw_07g"&gt;hello from Linus&lt;/a&gt;), I immediately decided to find another program and that was &lt;a href="http://jonls.dk/redshift/"&gt;Redshift&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
-&lt;h3&gt;1. Install programm&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install redshift redshift-gtk
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;h3&gt;1. Install program&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install redshift redshift-gtk&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;2. Setup config file&lt;/h3&gt;
 &lt;p&gt;Create next file &lt;code&gt;~/.config/redshift.conf&lt;/code&gt; at your $HOME directory.
 Example of &lt;code&gt;redshift.conf&lt;/code&gt; file you can look &lt;a href="https://github.com/jonls/redshift/blob/master/redshift.conf.sample"&gt;here&lt;/a&gt;.
@@ -88,7 +97,7 @@ First of all, it must be said that the documentation of Django is very well docu
 &lt;li&gt;&lt;a href="http://proadvices.blogspot.com/2014/03/blog-post.html"&gt;(RU) Here is a small list. Also from Yandex&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pyobject.ru/blog/2010/02/04/python-quiz/"&gt;(RU) Questions from Yury Yurevich&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Have a nice interview!)&lt;/strong&gt;&lt;/p&gt;</content><category term="python"></category><category term="inverview"></category></entry><entry><title>Improve your skill with games</title><link href="https://blog.DmytroLitvinov.com/2017/02/23/improve-your-skill-with-games" rel="alternate"></link><published>2017-02-23T10:45:00+02:00</published><updated>2017-02-23T10:45:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-02-23:/2017/02/23/improve-your-skill-with-games</id><summary type="html">&lt;p&gt;Here you will find a lot of games to improuve your skill in programming with FUN :)&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes you want to play games, but without wasting time doing it. So this article provides links to games, but related to programming.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Have a nice interview!)&lt;/strong&gt;&lt;/p&gt;</content><category term="python"></category><category term="inverview"></category></entry><entry><title>Improve your skill with games</title><link href="https://blog.DmytroLitvinov.com/2017/02/23/improve-your-skill-with-games" rel="alternate"></link><published>2017-02-23T10:45:00+02:00</published><updated>2017-02-23T10:45:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-02-23:/2017/02/23/improve-your-skill-with-games</id><summary type="html">&lt;p&gt;Here you will find a lot of games to improve your skill in programming with FUN :)&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes you want to play games, but without wasting time doing it. So this article provides links to games, but related to programming.&lt;/p&gt;
 &lt;h2&gt;CSS games&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://flukeout.github.io"&gt;CSS diner&lt;/a&gt;&lt;/li&gt;
