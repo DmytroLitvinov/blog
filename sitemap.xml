@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.DmytroLitvinov.com/</loc>
-<lastmod>2018-02-03T18:26:56-00:00</lastmod>
+<lastmod>2018-02-03T18:28:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.DmytroLitvinov.com/archives.html</loc>
-<lastmod>2018-02-03T18:26:56-00:00</lastmod>
+<lastmod>2018-02-03T18:28:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.DmytroLitvinov.com/tags.html</loc>
-<lastmod>2018-02-03T18:26:56-00:00</lastmod>
+<lastmod>2018-02-03T18:28:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.DmytroLitvinov.com/categories.html</loc>
-<lastmod>2018-02-03T18:26:56-00:00</lastmod>
+<lastmod>2018-02-03T18:28:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -123,15 +123,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.DmytroLitvinov.com/tag/games.html</loc>
-<lastmod>2017-02-23T10:45:00+02:02</lastmod>
+<loc>https://blog.DmytroLitvinov.com/tag/prefetch_related.html</loc>
+<lastmod>2017-08-19T13:54:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.DmytroLitvinov.com/tag/select_related.html</loc>
-<lastmod>2017-08-19T13:54:00+02:02</lastmod>
+<loc>https://blog.DmytroLitvinov.com/tag/inverview.html</loc>
+<lastmod>2017-03-05T21:22:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.DmytroLitvinov.com/tag/redshift.html</loc>
+<lastmod>2017-08-20T09:11:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -151,15 +158,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.DmytroLitvinov.com/tag/learning.html</loc>
-<lastmod>2017-03-16T09:32:00+02:02</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.DmytroLitvinov.com/tag/css.html</loc>
-<lastmod>2017-02-23T10:45:00+02:02</lastmod>
+<loc>https://blog.DmytroLitvinov.com/tag/programm.html</loc>
+<lastmod>2017-08-20T09:11:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -172,29 +172,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.DmytroLitvinov.com/tag/redshift.html</loc>
-<lastmod>2017-08-20T09:11:00+02:02</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.DmytroLitvinov.com/tag/inverview.html</loc>
-<lastmod>2017-03-05T21:22:00+02:02</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.DmytroLitvinov.com/tag/programm.html</loc>
-<lastmod>2017-08-20T09:11:00+02:02</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.DmytroLitvinov.com/tag/prefetch_related.html</loc>
+<loc>https://blog.DmytroLitvinov.com/tag/select_related.html</loc>
 <lastmod>2017-08-19T13:54:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.DmytroLitvinov.com/tag/games.html</loc>
+<lastmod>2017-02-23T10:45:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -202,6 +188,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.DmytroLitvinov.com/tag/podcast.html</loc>
 <lastmod>2017-03-24T21:49:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.DmytroLitvinov.com/tag/css.html</loc>
+<lastmod>2017-02-23T10:45:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.DmytroLitvinov.com/tag/learning.html</loc>
+<lastmod>2017-03-16T09:32:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -8,7 +8,7 @@ and hosted at GitHub …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Each p
 and hosted at GitHub. &lt;/p&gt;
 &lt;p&gt;The main files you should pay attention to are: &lt;a href="https://github.com/DmytroLitvinov/blog/blob/master/pelicanconf.py"&gt;pelicanconf.py&lt;/a&gt; 
 and &lt;a href="https://github.com/DmytroLitvinov/blog/blob/master/publishconf.py"&gt;publishconf.py&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Pelican has a great &lt;a href="link-http://docs.getpelican.com/en/stable/quickstart.html"&gt;quickstart section&lt;/a&gt;, 
+&lt;p&gt;Pelican has a great &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html"&gt;quickstart section&lt;/a&gt;, 
 after reading that, you will already have generated the main template for your blog.&lt;/p&gt;
 &lt;p&gt;I recommend you create repository called 'blog' and push these files to this repo.&lt;/p&gt;
 &lt;p&gt;So, add content and your blog is ready. Pretty simple, right?&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Redshift: setup the color temperature of your screen according to your surroundings</title><link href="https://blog.DmytroLitvinov.com/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings" rel="alternate"></link><published>2017-08-20T09:11:00+03:00</published><updated>2017-08-20T09:11:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2017-08-20:/2017/08/20/redshift-setup-the-color-temperature-of-your-screen-according-to-your-surroundings</id><summary type="html">&lt;blockquote&gt;
