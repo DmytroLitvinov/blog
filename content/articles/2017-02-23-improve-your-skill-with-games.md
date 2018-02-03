@@ -2,7 +2,7 @@ Title: Improve your skill with games
 Date: 2017-02-23 10:45
 Category: Programming
 Tags: games, python, javascript, css
-Summary: Here you will find a lot of games to improuve your skill in programming with FUN :)
+Summary: Here you will find a lot of games to improve your skill in programming with FUN :)
 
 
 Sometimes you want to play games, but without wasting time doing it. So this article provides links to games, but related to programming.

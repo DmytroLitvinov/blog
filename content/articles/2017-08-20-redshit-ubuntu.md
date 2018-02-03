@@ -10,10 +10,10 @@ This is description about software from main site.
 Earlier, I used [f.lux](https://justgetflux.com/) for Windows and I was happy with this program, but when I switched to Linux, I found out that after a month the f.lux stopped working. After I found out that there might be a problem due to my video card nVidia on Ubuntu OS ([hello from Linus](https://www.youtube.com/watch?v=_36yNWw_07g)), I immediately decided to find another program and that was [Redshift](http://jonls.dk/redshift/).
 
 ## Installation
-### 1. Install programm
-```
-sudo apt-get install redshift redshift-gtk
-```
+### 1. Install program
+
+`sudo apt-get install redshift redshift-gtk`
+
 ### 2. Setup config file
 Create next file `~/.config/redshift.conf` at your $HOME directory.
 Example of `redshift.conf` file you can look [here](https://github.com/jonls/redshift/blob/master/redshift.conf.sample).
