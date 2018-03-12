@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love - Programming, Django</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/programming-django.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-03-12T20:30:00+02:00</updated><entry><title>How to move a model between two Django apps</title><link href="https://blog.DmytroLitvinov.com/2018/03/12/how-to-move-a-model-between-two-django-apps" rel="alternate"></link><published>2018-03-12T20:30:00+02:00</published><updated>2018-03-12T20:30:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-03-12:/2018/03/12/how-to-move-a-model-between-two-django-apps</id><summary type="html">&lt;p&gt;Let's imagine that you have 2 django apps: &lt;code&gt;article&lt;/code&gt; and &lt;code&gt;blog&lt;/code&gt;. 
+So first one has model &lt;code&gt;Article&lt;/code&gt; as you already guessed.
+So we need to move our &lt;code&gt;Article&lt;/code&gt; model from &lt;code&gt;article&lt;/code&gt; app to &lt;code&gt;blog&lt;/code&gt; app.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy your code of &lt;code&gt;Article&lt;/code&gt; model from &lt;code&gt;article&lt;/code&gt; app to &lt;code&gt;blog&lt;/code&gt; app into &lt;code&gt;models.py …&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Let's imagine that you have 2 django apps: &lt;code&gt;article&lt;/code&gt; and &lt;code&gt;blog&lt;/code&gt;. 
+So first one has model &lt;code&gt;Article&lt;/code&gt; as you already guessed.
+So we need to move our &lt;code&gt;Article&lt;/code&gt; model from &lt;code&gt;article&lt;/code&gt; app to &lt;code&gt;blog&lt;/code&gt; app.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy your code of &lt;code&gt;Article&lt;/code&gt; model from &lt;code&gt;article&lt;/code&gt; app to &lt;code&gt;blog&lt;/code&gt; app into &lt;code&gt;models.py&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;We need to specify database table for our moved model. At our example it is &lt;code&gt;article_article&lt;/code&gt;. 
+You need to add to your &lt;code&gt;blog.Article&lt;/code&gt; model next lines:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;db_table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;article_article&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Now you can &lt;code&gt;python manage.py makemigrations blog&lt;/code&gt; for getting django migration for creating model or you could get
+creation migration from your &lt;code&gt;article&lt;/code&gt; app and place it to migrated migration in &lt;code&gt;blog&lt;/code&gt; app. If you run above command,
+you need to delete this migration after place it into previously migrated migration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now you need to change all references in your whole project to new new reference of your model.
+It can be ForeignKey, import etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that you do all correctly with command: &lt;code&gt;./manage.py migrate&lt;/code&gt;. Nothing should be migrated.
+If not - verify previous steps, because we just changed place of your model code, not database table name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Last step will be remove &lt;code&gt;db_table&lt;/code&gt; field from &lt;code&gt;class Meta&lt;/code&gt; and run next command:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./manage.py makemigrations blog
+./manage.py migrate blog
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After create migration you could see something next operation at migration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;operations&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+        &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AlterModelTable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;table=None&lt;/code&gt; means it will take the default table-name, which in this case will be &lt;code&gt;blog_article&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This solution was tested with Django 1.11 and Postgres database with ForeignKey relation.&lt;/p&gt;
+&lt;p&gt;Hope it helps.&lt;/p&gt;</content><category term="django"></category><category term="learning"></category></entry></feed>
