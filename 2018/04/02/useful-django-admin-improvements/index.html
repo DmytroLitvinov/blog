@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://blog.DmytroLitvinov.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://blog.DmytroLitvinov.com/theme/pygments/paraiso-dark.min.css">
+  <link rel="stylesheet" type="text/css" href="https://blog.DmytroLitvinov.com/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://blog.DmytroLitvinov.com/static/custom.css" rel="stylesheet">
+
+    <link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DevBlog with love Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92540730-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#9cb2ce">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#9cb2ce">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#9cb2ce">
+
+<meta name="author" content="Dmytro Litvinov" />
+<meta name="description" content="A few improvements that will improve your django admin application. Improve security of your Django admin: Add Django Admin Honeypot. It is a fake Django admin login screen to log and notify admins of attempted unauthorized access. Also I recommend you to change your real admin url to URL with …" />
+<meta name="keywords" content="django, python">
+
+<meta property="og:site_name" content="DevBlog with love"/>
+<meta property="og:title" content="Useful Django admin improvements"/>
+<meta property="og:description" content="A few improvements that will improve your django admin application. Improve security of your Django admin: Add Django Admin Honeypot. It is a fake Django admin login screen to log and notify admins of attempted unauthorized access. Also I recommend you to change your real admin url to URL with …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://blog.DmytroLitvinov.com/2018/04/02/useful-django-admin-improvements"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-04-02 21:58:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://blog.DmytroLitvinov.com/author/dmytro-litvinov.html">
+<meta property="article:section" content="Django, Programming"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="//github.com/DmytroLitvinov.png">
+
+  <title>DevBlog with love &ndash; Useful Django admin improvements</title>
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T2GHTH2');
+</script>
+<!-- End Google Tag Manager --></head>
+<body>
+<!-- Google Tag Manager -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2GHTH2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->  <aside>
+    <div>
+      <a href="https://blog.DmytroLitvinov.com">
+        <img src="//github.com/DmytroLitvinov.png" alt="Dmytro Litvinov" title="Dmytro Litvinov">
+      </a>
+      <h1><a href="https://blog.DmytroLitvinov.com">Dmytro Litvinov</a></h1>
+
+<p>Full Stack Python developer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://blog.DmytroLitvinov.com/about">About</a></li>
+          <li><a href="https://blog.DmytroLitvinov.com/contact">Contact</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://linkedin.com/in/DmytroLitvinov/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/Dmytro_Litvinov" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/DmytroLitvinov" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-gitlab" href="https://gitlab.com/DmytroLitvinov" target="_blank"><i class="fa fa-gitlab"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://blog.DmytroLitvinov.com">    Home
+</a>
+
+      <a href="/archives">Archives</a>
+      <a href="/categories">Categories</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="useful-django-admin-improvements">Useful Django admin improvements</h1>
+    <p>
+          Posted on Mon 02 April 2018 in <a href="https://blog.DmytroLitvinov.com/category/django-programming.html">Django, Programming</a>
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>A few improvements that will improve your django admin application.</p>
+<h5>Improve security of your Django admin:</h5>
+<p>Add <a href="https://github.com/dmpayton/django-admin-honeypot">Django Admin Honeypot</a>.
+It is a fake Django admin login screen to log and notify admins of attempted unauthorized access.
+Also I recommend you to change your <em>real</em> admin url to URL with 20+ random string.
+You can generate this random string from terminal with python just in one line:</p>
+<div class="highlight"><pre><span></span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Django-admin-honeypot pulls the users IP address from the REMOTE_ADDR request header.
+Don't forget to create MIDDLEWARE.
+Example of MIDDLEWARE:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RemoteAddrMiddleware</span><span class="p">(</span><span class="n">get_response</span><span class="p">):</span>  <span class="c1"># noqa</span>
+    <span class="c1"># One-time configuration and initialization.</span>
+
+    <span class="k">def</span> <span class="nf">middleware</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+        <span class="c1"># Code to be executed for each request before</span>
+        <span class="c1"># the view (and later middleware) are called.</span>
+
+        <span class="n">x_forwarded_for</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HTTP_X_FORWARDED_FOR&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x_forwarded_for</span><span class="p">:</span>
+            <span class="n">ip</span> <span class="o">=</span> <span class="n">x_forwarded_for</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ip</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="p">[</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ip</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">get_response</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+        <span class="c1"># Code to be executed for each request/response after</span>
+        <span class="c1"># the view is called.</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+    <span class="k">return</span> <span class="n">middleware</span>
+</pre></div>
+
+
+<h5>Visually distinguish environments in Django Admin</h5>
+<p>For this option you can use <a href="https://github.com/dizballanze/django-admin-env-notice">django-admin-env-notice</a>.
+The code is pretty simple and you can implement with own files without 3th party app.
+Really cool, right? :)</p>
+<h5>Order your models and apps.</h5>
+<p>As soon as your application grows, the more you want to put it in order.
+For this case I recommend to use <a href="https://github.com/mishbahr/django-modeladmin-reorder">django-modeladmin-order</a>.
+Now you can order as you wish your django apps. Also it has other interesting features. More detail you can find at link
+above. If you use other apps, you can leave a comment under this post.</p>
+<h5>Get all your project models on one single page with charts and whistles.</h5>
+<p>We work with Agile methodologies. Very often every project has custom User model.
+For this case I recommend you to use <a href="https://github.com/byashimov/django-controlcenter">django-controlcenter</a>
+The first pretty useful chart we use for SaaS projects is BarChart with user registrations.
+Every Monday we can take a look for the registrations of our project. Very useful and easy to implement.
+This library has a great documentation.</p>
+<h5>Add <code>raw_id_fields</code> for fields with ForeignKey.</h5>
+<p>By default, Django’s admin uses a select-box interface (&lt;select>) for fields that are ForeignKey.
+Sometimes you don’t want to incur the overhead of having to select all the related instances to display in the drop-down.
+It will increase time while your DB will execute query to get them all.
+More detail at <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.raw_id_fields">Django docs</a>.</p>
+<p>All these simple things will help to increase developer productivity and make your life more easier at your project.
+Do you have other useful advice? I'm ready to listen!)</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://blog.DmytroLitvinov.com/tag/django.html">django</a>
+      <a href="https://blog.DmytroLitvinov.com/tag/python.html">python</a>
+    </p>
+  </div>
+
+  <div class="center social-share">
+    <p>    Like this article? Share it with your friends!
+</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dmytrolitvinov-github-io';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy;  2018 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58af06693081c196" async="async"></script>
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " DevBlog with love ",
+  "url" : "https://blog.DmytroLitvinov.com",
+  "image": "//github.com/DmytroLitvinov.png",
+  "description": "Dmytro Litvinov's Thoughts and Writings"
+}
+</script>
+
+</body>
+</html>

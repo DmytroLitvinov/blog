@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-03-12T20:30:00+02:00</updated><entry><title>How to move a model between two Django apps</title><link href="https://blog.DmytroLitvinov.com/2018/03/12/how-to-move-a-model-between-two-django-apps" rel="alternate"></link><published>2018-03-12T20:30:00+02:00</published><updated>2018-03-12T20:30:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-03-12:/2018/03/12/how-to-move-a-model-between-two-django-apps</id><summary type="html">&lt;p&gt;Let's imagine that you have 2 django apps: &lt;code&gt;article&lt;/code&gt; and &lt;code&gt;blog&lt;/code&gt;. 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-04-02T21:58:00+03:00</updated><entry><title>Useful Django admin improvements</title><link href="https://blog.DmytroLitvinov.com/2018/04/02/useful-django-admin-improvements" rel="alternate"></link><published>2018-04-02T21:58:00+03:00</published><updated>2018-04-02T21:58:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-04-02:/2018/04/02/useful-django-admin-improvements</id><summary type="html">&lt;p&gt;A few improvements that will improve your django admin application.&lt;/p&gt;
+&lt;h5&gt;Improve security of your Django admin:&lt;/h5&gt;
+&lt;p&gt;Add &lt;a href="https://github.com/dmpayton/django-admin-honeypot"&gt;Django Admin Honeypot&lt;/a&gt;.
+It is a fake Django admin login screen to log and notify admins of attempted unauthorized access.
+Also I recommend you to change your &lt;em&gt;real&lt;/em&gt; admin url to URL with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few improvements that will improve your django admin application.&lt;/p&gt;
+&lt;h5&gt;Improve security of your Django admin:&lt;/h5&gt;
+&lt;p&gt;Add &lt;a href="https://github.com/dmpayton/django-admin-honeypot"&gt;Django Admin Honeypot&lt;/a&gt;.
+It is a fake Django admin login screen to log and notify admins of attempted unauthorized access.
+Also I recommend you to change your &lt;em&gt;real&lt;/em&gt; admin url to URL with 20+ random string.
+You can generate this random string from terminal with python just in one line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ascii_letters&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;digits&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Django-admin-honeypot pulls the users IP address from the REMOTE_ADDR request header.
+Don't forget to create MIDDLEWARE.
+Example of MIDDLEWARE:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;RemoteAddrMiddleware&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;get_response&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;  &lt;span class="c1"&gt;# noqa&lt;/span&gt;
+    &lt;span class="c1"&gt;# One-time configuration and initialization.&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;middleware&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# Code to be executed for each request before&lt;/span&gt;
+        &lt;span class="c1"&gt;# the view (and later middleware) are called.&lt;/span&gt;
+
+        &lt;span class="n"&gt;x_forwarded_for&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;META&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;HTTP_X_FORWARDED_FOR&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x_forwarded_for&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;ip&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x_forwarded_for&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;ip&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;META&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;REMOTE_ADDR&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;META&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;REMOTE_ADDR&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ip&lt;/span&gt;
+
+        &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# Code to be executed for each request/response after&lt;/span&gt;
+        &lt;span class="c1"&gt;# the view is called.&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;middleware&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;Visually distinguish environments in Django Admin&lt;/h5&gt;
+&lt;p&gt;For this option you can use &lt;a href="https://github.com/dizballanze/django-admin-env-notice"&gt;django-admin-env-notice&lt;/a&gt;.
+The code is pretty simple and you can implement with own files without 3th party app.
+Really cool, right? :)&lt;/p&gt;
+&lt;h5&gt;Order your models and apps.&lt;/h5&gt;
+&lt;p&gt;As soon as your application grows, the more you want to put it in order.
+For this case I recommend to use &lt;a href="https://github.com/mishbahr/django-modeladmin-reorder"&gt;django-modeladmin-order&lt;/a&gt;.
+Now you can order as you wish your django apps. Also it has other interesting features. More detail you can find at link
+above. If you use other apps, you can leave a comment under this post.&lt;/p&gt;
+&lt;h5&gt;Get all your project models on one single page with charts and whistles.&lt;/h5&gt;
+&lt;p&gt;We work with Agile methodologies. Very often every project has custom User model.
+For this case I recommend you to use &lt;a href="https://github.com/byashimov/django-controlcenter"&gt;django-controlcenter&lt;/a&gt;
+The first pretty useful chart we use for SaaS projects is BarChart with user registrations.
+Every Monday we can take a look for the registrations of our project. Very useful and easy to implement.
+This library has a great documentation.&lt;/p&gt;
+&lt;h5&gt;Add &lt;code&gt;raw_id_fields&lt;/code&gt; for fields with ForeignKey.&lt;/h5&gt;
+&lt;p&gt;By default, Django’s admin uses a select-box interface (&amp;lt;select&gt;) for fields that are ForeignKey.
+Sometimes you don’t want to incur the overhead of having to select all the related instances to display in the drop-down.
+It will increase time while your DB will execute query to get them all.
+More detail at &lt;a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.raw_id_fields"&gt;Django docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All these simple things will help to increase developer productivity and make your life more easier at your project.
+Do you have other useful advice? I'm ready to listen!)&lt;/p&gt;</content><category term="django"></category><category term="python"></category></entry><entry><title>How to move a model between two Django apps</title><link href="https://blog.DmytroLitvinov.com/2018/03/12/how-to-move-a-model-between-two-django-apps" rel="alternate"></link><published>2018-03-12T20:30:00+02:00</published><updated>2018-03-12T20:30:00+02:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-03-12:/2018/03/12/how-to-move-a-model-between-two-django-apps</id><summary type="html">&lt;p&gt;Let's imagine that you have 2 django apps: &lt;code&gt;article&lt;/code&gt; and &lt;code&gt;blog&lt;/code&gt;. 
 So first one has model &lt;code&gt;Article&lt;/code&gt; as you already guessed.
 So we need to move our &lt;code&gt;Article&lt;/code&gt; model from &lt;code&gt;article&lt;/code&gt; app to &lt;code&gt;blog&lt;/code&gt; app.&lt;/p&gt;
 &lt;ul&gt;
