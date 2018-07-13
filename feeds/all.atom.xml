@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-04-02T21:58:00+03:00</updated><entry><title>Useful Django admin improvements</title><link href="https://blog.DmytroLitvinov.com/2018/04/02/useful-django-admin-improvements" rel="alternate"></link><published>2018-04-02T21:58:00+03:00</published><updated>2018-04-02T21:58:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-04-02:/2018/04/02/useful-django-admin-improvements</id><summary type="html">&lt;p&gt;A few improvements that will improve your django admin application.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DevBlog with love</title><link href="https://blog.DmytroLitvinov.com/" rel="alternate"></link><link href="https://blog.DmytroLitvinov.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.DmytroLitvinov.com/</id><updated>2018-07-13T23:30:00+03:00</updated><entry><title>How I use IFTTT</title><link href="https://blog.DmytroLitvinov.com/2018/07/13/how-i-use-ifttt" rel="alternate"></link><published>2018-07-13T23:30:00+03:00</published><updated>2018-07-13T23:30:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-07-13:/2018/07/13/how-i-use-ifttt</id><summary type="html">&lt;p&gt;What is IFTTT and how do I use it at daily life&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few improvements that will improve your django admin application.&lt;/p&gt;
+&lt;p&gt;One of these days I remembered about such service as &lt;a href="https://ifttt.com/"&gt;IFTTT&lt;/a&gt;. Also known as "If This Then That". IFTTT helps your apps and devices work together in new ways.&lt;/p&gt;
+&lt;p&gt;I discover starter page and found some usefull applets for me.
+I dont remember is &lt;a href="https://ifttt.com/applets/i8YQ3XsG-get-an-email-with-the-latest-ifttt-updates"&gt;Get an email with latest IFTTT updates&lt;/a&gt; setup by default or not, but it is useful to get latest updates.&lt;/p&gt;
+&lt;p&gt;The last two is related to &lt;a href="https://ifttt.com/weather"&gt;weather&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Here there are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ifttt.com/applets/81321378d-cold-tomorrow-notify-me"&gt;Cold tomorrow? Notify me!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ifttt.com/applets/80807030d-rain-today-don-t-forget-an-umbrella"&gt;Rain today? Don't forget an umbrella&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since the post is written in the summer,the second applet is more actual for me.
+Before rain I get notification to my mobile phone.
+It is very useful and at this moment I am trying to find more suitable for me applets.&lt;/p&gt;
+&lt;p&gt;Stay productive!
+Use technology by maximum as you can.&lt;/p&gt;</content><category term="programm"></category><category term="lifehack"></category></entry><entry><title>Useful Django admin improvements</title><link href="https://blog.DmytroLitvinov.com/2018/04/02/useful-django-admin-improvements" rel="alternate"></link><published>2018-04-02T21:58:00+03:00</published><updated>2018-04-02T21:58:00+03:00</updated><author><name>Dmytro Litvinov</name></author><id>tag:blog.dmytrolitvinov.com,2018-04-02:/2018/04/02/useful-django-admin-improvements</id><summary type="html">&lt;p&gt;A few improvements that will improve your django admin application.&lt;/p&gt;
 &lt;h5&gt;Improve security of your Django admin:&lt;/h5&gt;
 &lt;p&gt;Add &lt;a href="https://github.com/dmpayton/django-admin-honeypot"&gt;Django Admin Honeypot&lt;/a&gt;.
 It is a fake Django admin login screen to log and notify admins of attempted unauthorized access.

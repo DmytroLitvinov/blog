@@ -221,7 +221,7 @@ main {
       font-size: .78em;
     }
 
-    code {
+    *:not(pre) > code {
       font-size: .8em;
       white-space: nowrap;
       color: #c25;
@@ -448,6 +448,10 @@ ul.social {
 
   a.sc-xing {
     background-color: @xing-bg-color;
+  }
+
+  a.sc-bitbucket {
+    background-color: @bitbucket-bg-color;
   }
 
 }
