@@ -60,7 +60,7 @@ DEFAULT_CATEGORY = 'Dev'
 
 # Social widget
 SOCIAL = (('linkedin', 'https://linkedin.com/in/DmytroLitvinov/'),
-          ('twitter', 'https://twitter.com/Dmytro_Litvinov'),
+          ('twitter', 'https://twitter.com/DmytroLitvinov'),
           ('github', 'https://github.com/DmytroLitvinov'),
           ('gitlab', 'https://gitlab.com/DmytroLitvinov'))
 
